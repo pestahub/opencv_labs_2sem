@@ -40,9 +40,10 @@ int main(int argc, char** argv){
 	imshow("image", image);
     Mat bgrImg, hsvImg, gray, imgLamp;
     imgLamp = image.clone();
-    gray = imread("image", 0);
+    gray = imread(image_file, 0);
     
     threshold(gray, thres_image, 247, 255, THRESH_BINARY);
+    
     imshow("thres_image", thres_image);
 
     vector<vector<Point>> cnts;
